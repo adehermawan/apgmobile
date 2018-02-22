@@ -31,6 +31,16 @@ angular.module('mm.addons.files', ['mm.core'])
             }
         })
 
+        .state('site.contactus', {
+            url: '/contactus',
+            views: {
+                'site': {
+                    controller: 'mmaFilesIndexController',
+                    templateUrl: 'addons/files/templates/contactus.html'
+                }
+            }
+        })
+
         .state('site.files-list', {
             url: '/list',
             params: {

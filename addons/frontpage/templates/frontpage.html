@@ -1,5 +1,5 @@
 <ion-view>
-    <ion-nav-title>{{ 'mma.frontpage.sitehome' | translate }}</ion-nav-title>
+    <ion-nav-title>News</ion-nav-title>
     <ion-content mm-state-class padding="true">
         <ion-refresher pulling-text="{{ 'mm.core.pulltorefresh' | translate }}" ng-if="frontpageLoaded" on-refresh="doRefresh()">
         </ion-refresher>
@@ -30,8 +30,8 @@
     <ion-footer-bar class="bar-light bar-footer-adjustable" keyboard-attach>
         <form class="mma-messages-send-message-bar">
             <div class="mma-messages-input-inset item-input-inset">
-                <a ui-sref="site.frontpage" class="tab-item button button-icon ion-home"></a>
-                <a ui-sref="site.mm_availablecourses" class="tab-item button button-icon ion-ios-list-outline"></a>
+                <a ui-sref="site.myoverview" class="tab-item button button-icon ion-home"></a>
+                <a ui-sref="site.mm_coursescategories" class="tab-item button button-icon ion-ios-list-outline"></a>
                 <a ui-sref="site.xp" class="tab-item button button-icon ion-trophy"></a>
                 <a menu-close mm-user-link userid="{{siteinfo.userid}}" class="tab-item button button-icon ion-person"></a>
             </div>
