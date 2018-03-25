@@ -74,6 +74,46 @@ p.mma-mod-quiz-warning {
   background-color: $mma-mod-quiz-alternate-color;
 }
 
+
+.pertanyaan {
+    background: url('../img/bg-quiz.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    z-index: 2;
+}
+
+.item-pertanyaan {
+  border-color: #0064d2;
+  /* background-color: #ffffff; */
+  color: #3a3a3a;
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: -1px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 16px;
+  }
+
+.pilihan {
+    min-width: 100%; display: inline-block; background-color: #caefff;
+}
+
+.carding,
+.list-inset {
+  overflow: hidden;
+  margin: 20px 10px;
+  border-radius: 2px;
+  background-color: #fffbf2;
+  }
+
+.carding {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); */
+  }
 .mma-mod_quiz-connection-error, ion-popover-view.popover.mma-mod_quiz-connection-error {
   background-color: $mma-mod-quiz-conecterr-color;
 }

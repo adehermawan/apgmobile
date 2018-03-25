@@ -31,6 +31,16 @@ angular.module('mm.addons.frontpage', [])
                 controller: 'mmaFrontpageCtrl'
             }
         }
+    })
+
+    .state('site.news', {
+        url: '/news',
+        views: {
+            'site': {
+                controller: 'mmaFrontpageCtrl',
+                templateUrl: 'addons/frontpage/templates/news.html'
+            }
+        }
     });
 })
 

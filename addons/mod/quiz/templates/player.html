@@ -1,4 +1,4 @@
-<ion-view can-swipe-back="false">
+<ion-view class="pertanyaan" can-swipe-back="false">
     <ion-nav-title><mm-format-text watch="true">{{ quiz.name }}</mm-format-text></ion-nav-title>
     <ion-nav-buttons side="secondary">
         <button id="mma-mod_quiz-connectionerror-button" class="button button-icon ion-alert-circled" ng-show="autoSaveError" ng-click="conErrPopover.show($event)" aria-label="{{ 'mm.core.error' | translate }}">
@@ -6,6 +6,7 @@
         <button menu-toggle="right" ng-if="toc && toc.length" class="button button-icon icon ion-bookmark" aria-label="{{ 'mma.mod_quiz.opentoc' | translate }}"></button>
     </ion-nav-buttons>
     <!-- Navigation arrows -->
+    <!--
     <ion-header-bar class="bar-subheader mma-mod-quiz-subheader" ng-if="dataLoaded && questions.length && !quizAborted && !showSummary">
         <div class="row row-center">
             <div class="col col-20">
@@ -19,6 +20,7 @@
             </div>
         </div>
     </ion-header-bar>
+-->
     <ion-content mm-state-class delegate-handle="mmaModQuizPlayerScroll" ng-class="{'has-subheader': dataLoaded && questions.length && !quizAborted && !showSummary}">
         <mm-loading hide-until="dataLoaded">
             <div class="list padding" ng-if="!attempt">
@@ -27,7 +29,8 @@
             <!-- Questions -->
             <form name="mma-mod_quiz-player-form" ng-if="questions.length && !quizAborted && !showSummary">
                 <div ng-repeat="question in questions">
-                    <section class="card" id="mma-mod_quiz-question-{{question.slot}}">
+                    <section class="carding" id="mma-mod_quiz-question-{{question.slot}}">
+<!--
                         <div class="item item-divider">
                             <h2 ng-if="question.number" class="inline">{{ 'mm.question.questionno' | translate:{$a: question.number} }}</h2>
                             <h2 ng-if="!question.number" class="inline">{{ 'mm.question.information' | translate }}</h2>
@@ -36,11 +39,12 @@
                                 <span ng-if="question.readableMark" class="block"><mm-format-text watch="true">{{question.readableMark}}</mm-format-text></span>
                             </div>
                         </div>
-                        <mm-question class="item item-complex item-text-wrap" question="question" abort="abortQuiz()" button-clicked="behaviourButtonClicked(name, value)" component="component" component-id="quiz.coursemodule" attempt-id="attempt.id" offline-enabled="{{offline}}" scroll-handle="mmaModQuizPlayerScroll"></mm-question>
+-->
+                        <mm-question class="item-pertanyaan item-complex item-text-wrap" question="question" abort="abortQuiz()" button-clicked="behaviourButtonClicked(name, value)" component="component" component-id="quiz.coursemodule" attempt-id="attempt.id" offline-enabled="{{offline}}" scroll-handle="mmaModQuizPlayerScroll"></mm-question>
                     </section>
                 </div>
             </form>
-            <div ng-if="dataLoaded && questions.length && !quizAborted && !showSummary" class="item item-text-wrap row-buttons responsive-sm">
+            <div ng-if="dataLoaded && questions.length && !quizAborted && !showSummary" class="item-text-wrap row-buttons responsive-sm">
                 <button ng-if="previousPage >= 0" class="button button-block icon-left ion-chevron-left" ng-click="loadPage(previousPage)">
                     {{ 'mm.core.previous' | translate }}
                 </button>

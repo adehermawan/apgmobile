@@ -125,5 +125,9 @@ angular.module('mm.addons.frontpage')
         });
     };
 
+    self.getNews = function() {
+            return $mmSite.read('core_badges_get_user_badges');
+        };
+
     return self;
 });

@@ -69,9 +69,9 @@
                         </a>
                     </li>
                 -->
-                <li>
-                    <a menu-close class="item item-icon-left" ui-sref="site.frontpage" title="News">
-                        <i class="icon ion-earth"></i>News
+                <li ng-if="showHelp">
+                    <a menu-close class="item item-icon-left" ng-href="https://ina2018apg.id/news/" mm-link in-app="inappbrowser" auto-login="yes" title="News">
+                        <i class="icon ion-help-buoy"></i>News
                     </a>
                 </li>
                 <li>
