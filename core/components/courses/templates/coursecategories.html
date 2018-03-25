@@ -31,4 +31,15 @@
             <mm-empty-box ng-if="!categories.length && !courses.length" icon="ion-ionic" message="{{ 'mm.courses.nocoursesyet' | translate }}"></mm-empty-box>
         </mm-loading>
     </ion-content>
+
+    <ion-footer-bar class="bar-light bar-footer-adjustable" keyboard-attach>
+        <form class="mma-messages-send-message-bar">
+            <div class="mma-messages-input-inset item-input-inset">
+                <a ui-sref="site.myoverview" class="tab-item button button-icon ion-home"></a>
+                <a ui-sref="site.mm_coursescategories" class="tab-item button button-icon ion-ios-list-outline"></a>
+                <a ui-sref="site.xp" class="tab-item button button-icon ion-trophy"></a>
+                <a menu-close mm-user-link userid="{{siteinfo.userid}}" class="tab-item button button-icon ion-person"></a>
+            </div>
+        </form>
+    </ion-footer-bar>
 </ion-view>

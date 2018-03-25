@@ -114,4 +114,6 @@ angular.module('mm.addons.frontpage')
             });
         });
     };
+
+    $scope.hello = $mmSite.wsAvailable('core_blog_get_news');
 });

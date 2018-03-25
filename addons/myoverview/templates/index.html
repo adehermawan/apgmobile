@@ -1,4 +1,4 @@
-<ion-view view-title="{{ 'mma.myoverview.pluginname' | translate }}">
+<ion-view view-title="Home">
     <ion-nav-buttons side="secondary">
         <a ui-sref="site.mm_searchcourses" ng-if="searchEnabled" class="button button-icon ion-ios-search-strong"></a>
         <a ui-sref="site.messages" ng-if="searchEnabled" class="button button-icon ion-chatbox"></a>
@@ -69,8 +69,8 @@
     <ion-footer-bar class="bar-light bar-footer-adjustable" keyboard-attach>
         <form class="mma-messages-send-message-bar">
             <div class="mma-messages-input-inset item-input-inset">
-                <a ui-sref="site.frontpage" class="tab-item button button-icon ion-home"></a>
-                <a ui-sref="site.mm_availablecourses" class="tab-item button button-icon ion-ios-list-outline"></a>
+                <a ui-sref="site.myoverview" class="tab-item button button-icon ion-home"></a>
+                <a ui-sref="site.mm_coursescategories" class="tab-item button button-icon ion-ios-list-outline"></a>
                 <a ui-sref="site.xp" class="tab-item button button-icon ion-trophy"></a>
                 <a menu-close mm-user-link userid="{{siteinfo.userid}}" class="tab-item button button-icon ion-person"></a>
             </div>

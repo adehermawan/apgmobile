@@ -1,0 +1,35 @@
+<ion-view view-title="Contact Us">
+    <ion-content padding="true" mm-state-class>
+        <section>
+            <a ng-href="http://ina2018apg.id" mm-link auto-login="no" title="website">
+            <section class="list card">
+                <div class="item item-text-wrap"><img ng-src="img/web.png" class="avatar" role="presentation"></div>
+                <div class="item item-text-wrap">http://ina2018apg.id</div>
+            </section>
+            </a>
+            <a ng-href="https://twitter.com/ina2018apg" mm-link auto-login="no" title="twitter">
+            <section class="list card">
+                <div class="item item-text-wrap"><img ng-src="img/twitter.png" class="avatar" role="presentation"></div>
+                <div class="item item-text-wrap">https://twitter.com/ina2018apg</div>
+            </section>
+            </a>
+            <a ng-href="https://www.instagram.com/asianpg2018" mm-link auto-login="no" title="instagram">
+            <section class="list card">
+                <div class="item item-text-wrap"><img ng-src="img/ig.png" class="avatar" role="presentation"></div>
+                <div class="item item-text-wrap">@asianpg2018</div>
+            </section>
+        </a>
+        </section>
+    </ion-content>
+
+    <ion-footer-bar class="bar-light bar-footer-adjustable" keyboard-attach>
+        <form class="mma-messages-send-message-bar">
+            <div class="mma-messages-input-inset item-input-inset">
+                <a ui-sref="site.myoverview" class="tab-item button button-icon ion-home"></a>
+                <a ui-sref="site.mm_coursescategories" class="tab-item button button-icon ion-ios-list-outline"></a>
+                <a ui-sref="site.xp" class="tab-item button button-icon ion-trophy"></a>
+                <a menu-close mm-user-link userid="{{siteinfo.userid}}" class="tab-item button button-icon ion-person"></a>
+            </div>
+        </form>
+    </ion-footer-bar>
+</ion-view>

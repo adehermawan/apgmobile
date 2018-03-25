@@ -29,9 +29,11 @@
         <ion-content class="has-side-menu-header mm-sidemenu-menu">
             <nav>
                 <ul class="list dark">
+
                     <li class="item text-center" ng-if="(!handlers || !handlers.length) && !areNavHandlersLoaded()">
                         <ion-spinner></ion-spinner>
                     </li>
+                    <!--
                     <li ng-repeat="handler in handlers | orderBy:'-priority'" ng-controller="handler.controller" class="mm-sidemenu-handler {{class}}">
                         <a menu-close class="item item-icon-left" ui-sref="{{state}}" title="{{title | translate}}" ng-class="{'item-icon-right': loading}">
                             <i class="icon {{icon}}"></i> {{title | translate}}
@@ -39,6 +41,7 @@
                             <ion-spinner ng-if="loading" class="icon"></ion-spinner>
                         </a>
                     </li>
+
                     <li ng-repeat="item in customItems track by $index" class="mm-sidemenu-customitem" ng-if="item">
                         <a ng-if="item.type != 'embedded'" menu-close class="item item-icon-left" ng-href="{{item.url}}" mm-link in-app="{{item.type == 'inappbrowser'}}" capture-link="{{item.type == 'app'}}" title="{{item.label}}">
                             <i class="icon {{item.icon}}"></i>{{item.label}}
@@ -52,7 +55,7 @@
                             <i class="icon ion-earth"></i>{{ 'mm.sidemenu.website' | translate}}
                         </a>
                     </li>
-                    <!--
+
                     <li ng-if="showHelp">
                         <a menu-close class="item item-icon-left" ng-href="{{docsurl}}" mm-link auto-login="no" title="{{ 'mm.sidemenu.help' | translate}}">
                             <i class="icon ion-help-buoy"></i>{{ 'mm.sidemenu.help' | translate}}
@@ -66,6 +69,21 @@
                         </a>
                     </li>
                 -->
+                <li ng-if="showHelp">
+                    <a menu-close class="item item-icon-left" ng-href="https://ina2018apg.id/news/" mm-link in-app="inappbrowser" auto-login="yes" title="News">
+                        <i class="icon ion-help-buoy"></i>News
+                    </a>
+                </li>
+                <li>
+                    <a menu-close class="item item-icon-left" ui-sref="site.calendar" title="News">
+                        <i class="icon ion-calendar"></i>Calendar
+                    </a>
+                </li>
+                <li>
+                    <a menu-close class="item item-icon-left" ui-sref="site.contactus" title="News">
+                        <i class="icon ion-person-stalker"></i>Contact Us
+                    </a>
+                </li>
                     <li>
                         <a class="item item-icon-left" ng-click="logout()" title="{{ 'mm.sidemenu.changesite' | translate}}">
                             <i class="icon ion-log-out"></i>{{ logoutLabel | translate}}
