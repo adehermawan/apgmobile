@@ -21,6 +21,9 @@
         </div>
     </ion-header-bar>
 -->
+<ion-content class="quiz-logo">
+    <img src="img/logo-quiz.png" width="128" />
+</ion-content>
     <ion-content mm-state-class delegate-handle="mmaModQuizPlayerScroll" ng-class="{'has-subheader': dataLoaded && questions.length && !quizAborted && !showSummary}">
         <mm-loading hide-until="dataLoaded">
             <div class="list padding" ng-if="!attempt">
