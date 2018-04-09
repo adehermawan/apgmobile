@@ -76,7 +76,7 @@ p.mma-mod-quiz-warning {
 
 
 .pertanyaan {
-    background: url('../img/bg-quiz.png');
+    background: url('../img/bgquiz.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -106,7 +106,8 @@ p.mma-mod-quiz-warning {
   overflow: hidden;
   margin: 20px 10px;
   border-radius: 2px;
-  background-color: #fffbf2;
+  background-color: #ffffff;
+  opacity: 0.8;
   }
 
 .carding {
@@ -114,6 +115,12 @@ p.mma-mod-quiz-warning {
   padding-bottom: 1px;
   /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); */
   }
+
+.quiz-logo {
+    text-align: center;
+    margin-top: 2px;
+}
+
 .mma-mod_quiz-connection-error, ion-popover-view.popover.mma-mod_quiz-connection-error {
   background-color: $mma-mod-quiz-conecterr-color;
 }
